@@ -8,22 +8,22 @@ import greenfoot.*;// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Button extends Actor
 {
-    private World link;
+    private World lnk;
 
-    public Button(String image, World link)
+    public Button(String image, World lnk)
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/2/3;
         int myNewWidth = (int)myImage.getWidth()/2/3;
         myImage.scale(myNewWidth, myNewHeight);
-        this.link = link;
+        this.lnk = lnk;
     }
 
     public void act()
     {
         if (Greenfoot.mouseClicked(this))
         {
-            Greenfoot.setWorld(this.link);
+            Greenfoot.setWorld(this.lnk);
         }
     }
 }
